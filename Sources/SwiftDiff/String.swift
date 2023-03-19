@@ -10,7 +10,7 @@ extension String {
 
         let startIndex = index(self.startIndex, offsetBy: range.lowerBound)
         let endIndex = index(self.startIndex, offsetBy: range.upperBound - 1)
-        return self[startIndex...endIndex]
+        return String(self[startIndex...endIndex])
     }
 
     func substring(to offset: Int) -> String {
@@ -43,7 +43,7 @@ extension String {
             return nil
         }
 
-        return characters.distance(from: self.startIndex,
-                                   to: range.lowerBound)
+        return distance(from: self.startIndex,
+                        to: range.lowerBound)
     }
 }
